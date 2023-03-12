@@ -1,6 +1,6 @@
                        Galactix fuse
                           
-                       Version 0.6.8
+                       Version 0.6.9
 
             Resource extraction tool for Galactix by Popov Evgeniy Alekseyevich
 
@@ -10,9 +10,9 @@ System requirement
 
 Description and usage
 
-Galactix is old scroll-shooter by Cygnus Studios. This game store resources in FILE0001.GLB and FILE0002.GLB files.
+Galactix is old scroll-shooter by Cygnus Studios. This game store resources in GLB pseudo-archives.
 Do you want to extract files from these pseudo-archives? You can use my software for doing it.
-This software intends for DOS version of Galactix.
+This software intends for Galactix version 1.3.
 This program takes a target file name and output path as command line arguments.
 Always add directory separator(\ or /) at the end of output path.
 
@@ -59,4 +59,4 @@ Version history
 0.6.3 - 0.6.4 - Small bug fixed.
 0.6.5 - Small changes.
 0.6.6 - 0.6.7 - Small bug fixed.
-0.6.8 - Small changes.
+0.6.8 - 0.6.9 - Small changes.

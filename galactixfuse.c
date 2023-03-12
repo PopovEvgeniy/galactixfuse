@@ -38,8 +38,9 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.6.8");
+ puts("Galactix fuse. Version 0.6.9");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2023 years");
+ puts("This tool intends for Galactix version 1.3");
  puts("This software distributed under GNU GENERAL PUBLIC LICENSE");
 }
 
@@ -151,19 +152,19 @@ char *get_name(const char *path,const char *name)
 
 size_t check_format(FILE *input)
 {
- glb_head head;
- fread(&head,sizeof(glb_head),1,input);
- if (strncmp(head.signature,"GLIB FILE",9)!=0)
+ glb_fat_entry head;
+ fread(&head,sizeof(glb_fat_entry),1,input);
+ if (strncmp(head.name,"GLIB FILE",9)!=0)
  {
   show_message("Invalid format");
   exit(5);
  }
- if (head.junk!=0)
+ if (head.length!=0)
  {
   show_message("Invalid format");
   exit(5);
  }
- return head.amount;
+ return head.offset;
 }
 
 glb_fat_entry *read_table(FILE *input,const size_t amount)
