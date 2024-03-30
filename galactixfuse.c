@@ -38,8 +38,8 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.6.9");
- puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2023 years");
+ puts("Galactix fuse. Version 0.7");
+ puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2024 years");
  puts("This tool intends for Galactix version 1.3");
  puts("This software distributed under GNU GENERAL PUBLIC LICENSE");
 }
@@ -56,7 +56,7 @@ FILE *open_input_file(const char *name)
  target=fopen(name,"rb");
  if (target==NULL)
  {
-  show_message("Can't open input file");
+  puts("Can't open input file");
   exit(1);
  }
  return target;
@@ -156,12 +156,12 @@ size_t check_format(FILE *input)
  fread(&head,sizeof(glb_fat_entry),1,input);
  if (strncmp(head.name,"GLIB FILE",9)!=0)
  {
-  show_message("Invalid format");
+  puts("Invalid format");
   exit(5);
  }
  if (head.length!=0)
  {
-  show_message("Invalid format");
+  puts("Invalid format");
   exit(5);
  }
  return head.offset;

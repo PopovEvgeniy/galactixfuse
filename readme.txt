@@ -1,12 +1,12 @@
                        Galactix fuse
                           
-                       Version 0.6.9
+                       Version 0.7
 
             Resource extraction tool for Galactix by Popov Evgeniy Alekseyevich
 
 System requirement
 
-48 kilobytes free space on storage media.
+64 kilobytes free space on storage media.
 
 Description and usage
 
@@ -59,4 +59,4 @@ Version history
 0.6.3 - 0.6.4 - Small bug fixed.
 0.6.5 - Small changes.
 0.6.6 - 0.6.7 - Small bug fixed.
-0.6.8 - 0.6.9 - Small changes.
+0.6.8 - 0.7 - Small changes.
