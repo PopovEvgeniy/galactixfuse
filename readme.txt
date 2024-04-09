@@ -1,6 +1,6 @@
                        Galactix fuse
                           
-                       Version 0.7
+                       Version 0.7.1
 
             Resource extraction tool for Galactix by Popov Evgeniy Alekseyevich
 
@@ -31,9 +31,9 @@ This program distributed under GNU GENERAL PUBLIC LICENSE.
 
 Source code
 
-The program source code was compiled under Open Watcom.
-But you can do it under any modern C compiler.
-Source code can be compiled for wide range operating systems, but you need to create makefile or build script by yourself.
+The source code was compiled under Open Watcom.
+But you can compile it under any modern C compiler.
+Source code can be compiled for wide of range operating systems, but you need to create makefile or build script by yourself.
 I provide only two things: compiled the binary file for Windows and makefile for Linux.
 
 Install and uninstall under Linux
@@ -60,3 +60,4 @@ Version history
 0.6.5 - Small changes.
 0.6.6 - 0.6.7 - Small bug fixed.
 0.6.8 - 0.7 - Small changes.
+0.7.1 - Visual C++ support improved.

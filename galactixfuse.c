@@ -1,7 +1,4 @@
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "galactixfuse.h"
 #include "format.h"
 
 void show_intro();
@@ -38,7 +35,7 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.7");
+ puts("Galactix fuse. Version 0.7.1");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2024 years");
  puts("This tool intends for Galactix version 1.3");
  puts("This software distributed under GNU GENERAL PUBLIC LICENSE");
