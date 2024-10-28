@@ -1,6 +1,6 @@
                        Galactix fuse
                           
-                       Version 0.7.2.1
+                       Version 0.7.2.2
 
             Resource extraction tool for Galactix by Popov Evgeniy Alekseyevich
 
@@ -53,14 +53,14 @@ You can send me a letter at tuzik87@inbox.ru.
 Version history
 
 0.1: Initial version.
-0.2-0.3: A small bug is fixed.
+0.2-0.3: A small bug has been fixed.
 0.4-0.6.2: The small changes.
-0.6.2.1: The makefile updated.
-0.6.3-0.6.4: The small bug is fixed.
+0.6.2.1: The makefile has been updated.
+0.6.3-0.6.4: The small bug has been fixed.
 0.6.5: The small changes.
-0.6.6-0.6.7: A small bug is fixed.
+0.6.6-0.6.7: A small bug has been fixed.
 0.6.8-0.7: The small changes.
-0.7.1: Visual C++ support improved.
-0.7.1.1: Documentation updated.
+0.7.1: Visual C++ support has improved.
+0.7.1.1: The documentation has been updated.
 0.7.2: The small changes.
-0.7.2.1: Documentation updated.
+0.7.2.1-0.7.2.2: The documentation has been updated.
