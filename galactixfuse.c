@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.7.2");
+ puts("Galactix fuse. Version 0.7.3");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2024 years");
  puts("This tool is intended for Galactix version 1.3");
  puts("This software is distributed under GNU GENERAL PUBLIC LICENSE");
