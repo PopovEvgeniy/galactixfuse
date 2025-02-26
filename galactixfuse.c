@@ -35,8 +35,8 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.7.3");
- puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2024 years");
+ puts("Galactix fuse. Version 0.7.4");
+ puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2025 years");
  puts("This tool is intended for Galactix version 1.3");
  puts("This software is distributed under GNU GENERAL PUBLIC LICENSE");
 }
@@ -143,8 +143,8 @@ char *get_name(const char *path,const char *name)
  size_t length;
  length=strlen(path)+strlen(name);
  result=get_string_memory(length);
- strcpy(result,path);
- return strcat(result,name);
+ sprintf(result,"%s%s",path,name);
+ return result;
 }
 
 size_t check_format(FILE *input)

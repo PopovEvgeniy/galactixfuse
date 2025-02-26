@@ -1,6 +1,6 @@
                        Galactix fuse
                           
-                       Version 0.7.3
+                       Version 0.7.4
 
             Resource extraction tool for Galactix by Popov Evgeniy Alekseyevich
 
@@ -65,3 +65,4 @@ Version history
 0.7.2: The small changes.
 0.7.2.1-0.7.2.2: The documentation has been updated.
 0.7.3: The source code was recompiled under Tiny C Compiler.
+0.7.4: The small changes.
