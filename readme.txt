@@ -1,6 +1,6 @@
                        Galactix fuse
                           
-                       Version 0.7.4
+                       Version 0.7.4.1
 
             Resource extraction tool for Galactix by Popov Evgeniy Alekseyevich
 
@@ -27,7 +27,7 @@ Exit codes
 
 License
 
-This program is distributed under GNU GENERAL PUBLIC LICENSE.
+This program is distributed under the GNU GENERAL PUBLIC LICENSE.
 
 Source code
 
@@ -46,10 +46,6 @@ Follow these steps:
 Run as root to install: make install
 Run as root to uninstall: make uninstall
 
-Contact
-
-You can send me a letter at tuzik87@inbox.ru.
-
 Version history
 
 0.1: Initial version.
@@ -66,3 +62,4 @@ Version history
 0.7.2.1-0.7.2.2: The documentation has been updated.
 0.7.3: The source code was recompiled under Tiny C Compiler.
 0.7.4: The small changes.
+0.7.4.1: The documentation has been updated.
