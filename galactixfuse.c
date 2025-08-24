@@ -35,10 +35,10 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.7.4");
+ puts("Galactix fuse. Version 0.7.5");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2025 years");
  puts("This tool is intended for Galactix version 1.3");
- puts("This software is distributed under GNU GENERAL PUBLIC LICENSE");
+ puts("This software is distributed under the GNU GENERAL PUBLIC LICENSE");
 }
 
 void show_message(const char *message)
@@ -153,12 +153,12 @@ size_t check_format(FILE *input)
  fread(&head,sizeof(glb_fat_entry),1,input);
  if (strncmp(head.name,"GLIB FILE",9)!=0)
  {
-  puts("Invalid format");
+  puts("The invalid format");
   exit(5);
  }
  if (head.length!=0)
  {
-  puts("Invalid format");
+  puts("The invalid format");
   exit(5);
  }
  return head.offset;

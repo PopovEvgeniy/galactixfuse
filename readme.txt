@@ -1,12 +1,12 @@
                        Galactix fuse
                           
-                       Version 0.7.4.1
+                       Version 0.7.5
 
             Resource extraction tool for Galactix by Popov Evgeniy Alekseyevich
 
 System requirements
 
-32 kilobytes of free space on storage media.
+68 kilobytes of free space on storage media.
 
 Description and usage
 
@@ -18,12 +18,12 @@ Always add a directory separator (\ or /) at the end of the output path.
 
 Exit codes
 
-0: Operation was successfully completed.
+0: The operation was successfully completed.
 1: Can't open the input file.
 2: Can't create the output file.
 3: Can't jump to the target offset.
 4: Can't allocate memory.
-5: Invalid format.
+5: The invalid format.
 
 License
 
@@ -31,7 +31,7 @@ This program is distributed under the GNU GENERAL PUBLIC LICENSE.
 
 Source code
 
-The source code was compiled under Tiny C Compiler.
+The source code was compiled under Open Watcom.
 But you can compile it with any modern C compiler.
 The source code can be compiled for a wide range of operating systems, but you need to create a makefile or a build script by yourself.
 I provide only two things: the binary file for Windows and the makefile for Linux.
@@ -63,3 +63,4 @@ Version history
 0.7.3: The source code was recompiled under Tiny C Compiler.
 0.7.4: The small changes.
 0.7.4.1: The documentation has been updated.
+0.7.5: The small changes.
