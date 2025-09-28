@@ -1,12 +1,12 @@
                        Galactix fuse
                           
-                       Version 0.7.5.1
+                       Version 0.7.6
 
             Galactix resource extraction tool by Popov Evgeniy Alekseyevich
 
 The program description.
 
-Galactix is an old scroll shooter by Cygnus Studios. This game stores resources in GLB pseudo-archives.
+Galactix is an old scroll shooter by Cygnus Studios. This game stores the resources in GLB pseudo-archives.
 Do you want to extract the files from these pseudo-archives? You can use my software for doing it.
 This software is intended for Galactix version 1.3.
 This program takes a target file name and an output path as the command-line arguments.
@@ -61,3 +61,4 @@ Version history.
 0.7.4.1: The documentation has been updated.
 0.7.5: The small changes.
 0.7.5.1: The documentation has been updated.
+0.7.6: The extraction process has improved.
