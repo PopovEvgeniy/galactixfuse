@@ -1,5 +1,5 @@
 /*
-This code bases on the format description from DOS Game Modding Wiki:
+This code is based on the format description from the DOS Game Modding Wiki:
 https://moddingwiki.shikadi.net/wiki/GLB_Format_(Galactix)
 */
 
