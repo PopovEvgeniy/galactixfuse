@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
  }
  else
  {
-  show_message("Extracting a files... Please wait");
+  show_message("Extracting the files... Please wait");
   work(argv[1],argv[2]);
   show_message("The work has been finished");
  }
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.7.7");
+ puts("Galactix fuse. Version 0.7.8");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2025 years");
  puts("This tool is intended for Galactix version 1.3");
  puts("This software is distributed under the GNU GENERAL PUBLIC LICENSE");
@@ -174,7 +174,7 @@ size_t check_format(FILE *input)
 glb_fat_entry *read_table(FILE *input,const size_t amount)
 {
  glb_fat_entry *table;
- table=(glb_fat_entry*)malloc(amount*sizeof(glb_fat_entry));
+ table=(glb_fat_entry*)calloc(amount,sizeof(glb_fat_entry));
  check_memory(table);
  fread(table,sizeof(glb_fat_entry),amount,input);
  return table;
