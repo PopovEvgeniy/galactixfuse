@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.7.9");
+ puts("Galactix fuse. Version 0.8");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2026 years");
  puts("This tool is intended for Galactix version 1.3");
  puts("This software is distributed under the GNU GENERAL PUBLIC LICENSE");
@@ -132,7 +132,6 @@ void data_dump(FILE *input,FILE *output,const size_t length)
   }
   fread(buffer,sizeof(char),block,input);
   fwrite(buffer,sizeof(char),block,output);
-  fflush(output);
  }
  free(buffer);
 }
@@ -149,7 +148,6 @@ void fast_data_dump(FILE *input,FILE *output,const size_t length)
  {
   fread(buffer,sizeof(char),length,input);
   fwrite(buffer,sizeof(char),length,output);
-  fflush(output);
   free(buffer);
  }
 
