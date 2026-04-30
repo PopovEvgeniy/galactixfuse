@@ -5,6 +5,8 @@ void show_intro();
 void show_message(const char *message);
 FILE *open_input_file(const char *name);
 FILE *create_output_file(const char *name);
+void read_data(void *data,const size_t length,const size_t blocks,FILE *input);
+void write_data(const void *data,const size_t length,const size_t blocks,FILE *output);
 void go_offset(FILE *target,const unsigned long int offset);
 void check_memory(const void *memory);
 size_t check_format(FILE *input);
@@ -35,7 +37,7 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.8");
+ puts("Galactix fuse. Version 0.8.1");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2026 years");
  puts("This tool is intended for Galactix version 1.3");
  puts("This software is distributed under the GNU GENERAL PUBLIC LICENSE");
@@ -71,12 +73,36 @@ FILE *create_output_file(const char *name)
  return target;
 }
 
+void read_data(void *data,const size_t length,const size_t blocks,FILE *input)
+{
+ fread(data,length,blocks,input);
+ if (ferror(input)!=0)
+ {
+  putchar('\n');
+  puts("Can't read data!");
+  exit(3);
+ }
+
+}
+
+void write_data(const void *data,const size_t length,const size_t blocks,FILE *output)
+{
+ fwrite(data,length,blocks,output);
+ if (ferror(output)!=0)
+ {
+  putchar('\n');
+  puts("Can't write data!");
+  exit(4);
+ }
+
+}
+
 void go_offset(FILE *target,const unsigned long int offset)
 {
  if (fseek(target,offset,SEEK_SET)!=0)
  {
   show_message("Can't jump to the target offset");
-  exit(3);
+  exit(5);
  }
 
 }
@@ -86,7 +112,7 @@ void check_memory(const void *memory)
  if(memory==NULL)
  {
   show_message("Can't allocate memory");
-  exit(4);
+  exit(6);
  }
 
 }
@@ -94,16 +120,16 @@ void check_memory(const void *memory)
 size_t check_format(FILE *input)
 {
  glb_fat_entry head;
- fread(&head,sizeof(glb_fat_entry),1,input);
+ read_data(&head,sizeof(glb_fat_entry),1,input);
  if (strncmp(head.name,"GLIB FILE",9)!=0)
  {
   puts("The invalid format");
-  exit(5);
+  exit(7);
  }
  if (head.length!=0)
  {
   puts("The invalid format");
-  exit(5);
+  exit(7);
  }
  return head.offset;
 }
@@ -130,8 +156,8 @@ void data_dump(FILE *input,FILE *output,const size_t length)
   {
    block=elapsed;
   }
-  fread(buffer,sizeof(char),block,input);
-  fwrite(buffer,sizeof(char),block,output);
+  read_data(buffer,block,sizeof(char),input);
+  write_data(buffer,block,sizeof(char),output);
  }
  free(buffer);
 }
@@ -146,8 +172,8 @@ void fast_data_dump(FILE *input,FILE *output,const size_t length)
  }
  else
  {
-  fread(buffer,sizeof(char),length,input);
-  fwrite(buffer,sizeof(char),length,output);
+  read_data(buffer,length,sizeof(char),input);
+  write_data(buffer,length,sizeof(char),output);
   free(buffer);
  }
 
@@ -176,7 +202,7 @@ glb_fat_entry *read_table(FILE *input,const size_t amount)
  glb_fat_entry *table;
  table=(glb_fat_entry*)calloc(amount,sizeof(glb_fat_entry));
  check_memory(table);
- fread(table,sizeof(glb_fat_entry),amount,input);
+ read_data(table,sizeof(glb_fat_entry),amount,input);
  return table;
 }
 
