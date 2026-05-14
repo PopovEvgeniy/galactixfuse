@@ -2,7 +2,6 @@
 #include "format.h"
 
 void show_intro();
-void show_message(const char *message);
 FILE *open_input_file(const char *name);
 FILE *create_output_file(const char *name);
 void read_data(void *data,const size_t length,const size_t blocks,FILE *input);
@@ -23,13 +22,13 @@ int main(int argc, char *argv[])
  show_intro();
  if (argc<3)
  {
-  show_message("You must give a target file name and an output path as the command-line arguments!");
+  puts("You must give a target file name and an output path as the command-line arguments!");
  }
  else
  {
-  show_message("Extracting the files... Please wait");
+  puts("Extracting the files... Please wait");
   work(argv[1],argv[2]);
-  show_message("The work has been finished");
+  puts("The work has been finished");
  }
  return 0;
 }
@@ -37,16 +36,11 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse. Version 0.8.1");
+ puts("Galactix fuse. Version 0.8.2");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2026 years");
  puts("This tool is intended for Galactix version 1.3");
  puts("This software is distributed under the GNU GENERAL PUBLIC LICENSE");
-}
-
-void show_message(const char *message)
-{
  putchar('\n');
- puts(message);
 }
 
 FILE *open_input_file(const char *name)
@@ -67,7 +61,7 @@ FILE *create_output_file(const char *name)
  target=fopen(name,"wb");
  if (target==NULL)
  {
-  show_message("Can't create the ouput file");
+  puts("Can't create the ouput file");
   exit(2);
  }
  return target;
@@ -78,7 +72,6 @@ void read_data(void *data,const size_t length,const size_t blocks,FILE *input)
  fread(data,length,blocks,input);
  if (ferror(input)!=0)
  {
-  putchar('\n');
   puts("Can't read data!");
   exit(3);
  }
@@ -90,7 +83,6 @@ void write_data(const void *data,const size_t length,const size_t blocks,FILE *o
  fwrite(data,length,blocks,output);
  if (ferror(output)!=0)
  {
-  putchar('\n');
   puts("Can't write data!");
   exit(4);
  }
@@ -101,7 +93,7 @@ void go_offset(FILE *target,const unsigned long int offset)
 {
  if (fseek(target,offset,SEEK_SET)!=0)
  {
-  show_message("Can't jump to the target offset");
+  puts("Can't jump to the target offset");
   exit(5);
  }
 
@@ -111,7 +103,7 @@ void check_memory(const void *memory)
 {
  if(memory==NULL)
  {
-  show_message("Can't allocate memory");
+  puts("Can't allocate memory");
   exit(6);
  }
 
