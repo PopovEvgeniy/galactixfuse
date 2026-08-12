@@ -1,6 +1,6 @@
                        Galactix fuse
                           
-                       Version 0.8.5
+                       Version 0.8.6
 
             Galactix resource extraction tool by Popov Evgeniy Alekseyevich
 
@@ -22,6 +22,7 @@ Exit codes.
 5: Can't jump to the target offset.
 6: Can't allocate memory.
 7: The invalid format.
+8: The command-line arguments is invalid!
 
 License.
 
@@ -67,3 +68,4 @@ Version history.
 0.7.7-0.8: The small changes.
 0.8.1: The file processing has improved.
 0.8.2-0.8.5: The small changes.
+0.8.6: The file processing has improved.
