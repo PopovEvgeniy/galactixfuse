@@ -1,6 +1,6 @@
                        Galactix fuse
                           
-                       Version 0.8.6
+                       Version 0.8.7
 
             Galactix resource extraction tool by Popov Evgeniy Alekseyevich
 
@@ -68,4 +68,4 @@ Version history.
 0.7.7-0.8: The small changes.
 0.8.1: The file processing has improved.
 0.8.2-0.8.5: The small changes.
-0.8.6: The file processing has improved.
+0.8.6-0.8.7: The file processing has improved.
