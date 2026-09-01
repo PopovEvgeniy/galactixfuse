@@ -4,5 +4,5 @@ install:
 	@chmod ugo+rx /bin/galactixfuse
 	@echo Installation was successfully completed
 uninstall:
-	@rm -f /bin/galactixfuse
+	@rm /bin/galactixfuse
 	@echo Uninstallation was successfully completed
