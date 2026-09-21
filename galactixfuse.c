@@ -4,6 +4,7 @@
 
 void show_intro();
 void show_error(const char *message);
+void check_name(const char *name,const char *message,const int code);
 FILE *open_input_file(const char *name);
 FILE *create_output_file(const char *name);
 void read_data(void *data,const size_t length,const size_t blocks,FILE *input);
@@ -22,16 +23,26 @@ void work(const char *target,const char *path);
 int main(int argc, char *argv[])
 {
  show_intro();
- if (argc<3)
+ switch (argc)
  {
+  case 1:
   puts("You must give a target file name and an output path as the command-line arguments!");
   exit(COMMAND_LINE_ARGUMENTS_ERROR);
- }
- else
- {
+  break;
+  case 2:
+  puts("You don't give the output path");
+  exit(COMMAND_LINE_ARGUMENTS_ERROR);
+  break;
+  case 3:
+  check_name(argv[2],"The output path is empty",EMPTY_PATH_ERROR);
   puts("Extracting the files... Please wait");
   work(argv[1],argv[2]);
   puts("The work has been finished");
+  break;
+  default:
+  puts("You gave too many command-line arguments");
+  exit(COMMAND_LINE_ARGUMENTS_ERROR);
+  break;
  }
  return 0;
 }
@@ -39,10 +50,10 @@ int main(int argc, char *argv[])
 void show_intro()
 {
  putchar('\n');
- puts("Galactix fuse 0.8.8");
+ puts("Galactix fuse 0.8.9");
  puts("Galactix resource extraction tool by Popov Evgeniy Alekseyevich. 2022-2026 years");
  puts("This tool is intended for Galactix version 1.3");
- puts("This software is distributed under the GNU GENERAL PUBLIC LICENSE");
+ puts("This software is distributed under the GNU GENERAL PUBLIC LICENSE (version 2 or later) terms");
  putchar('\n');
 }
 
@@ -51,6 +62,21 @@ void show_error(const char *message)
  fputc('\n',stderr);
  fputs(message,stderr);
  fputc('\n',stderr);
+}
+
+void check_name(const char *name,const char *message,const int code)
+{
+ size_t length=0;
+ if (name!=NULL)
+ {
+  length=strlen(name);
+ }
+ if (length==0)
+ {
+  show_error(message);
+  exit(code);
+ }
+
 }
 
 FILE *open_input_file(const char *name)

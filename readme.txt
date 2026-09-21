@@ -1,6 +1,6 @@
                        Galactix fuse
                           
-                       Version 0.8.8
+                       Version 0.8.9
 
             Galactix resource extraction tool by Popov Evgeniy Alekseyevich
 
@@ -15,14 +15,15 @@ Always add a directory separator (\ or /) at the end of the output path.
 Exit codes.
 
 0: The operation was successfully completed.
-1: Can't open the input file.
-2: Can't create the output file.
-3: Can't read data!
-4: Can't write data!
-5: Can't jump to the target offset.
-6: Can't allocate memory.
-7: The invalid format.
-8: The command-line arguments is invalid!
+1: The output path is empty.
+2: Can't open the input file.
+3: Can't create the output file.
+4: Can't read data!
+5: Can't write data!
+6: Can't jump to the target offset.
+7: Can't allocate memory.
+8: The invalid format.
+9: The command-line arguments is invalid!
 
 License.
 
@@ -69,4 +70,4 @@ Version history.
 0.8.1: The file processing has improved.
 0.8.2-0.8.5: The small changes.
 0.8.6-0.8.7: The file processing has improved.
-0.8.8: The small changes.
+0.8.8-0.8.9: The small changes.
