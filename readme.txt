@@ -1,13 +1,13 @@
                        Galactix fuse
                           
-                       Version 0.8.9
+                       Version 0.8.9.1
 
             Galactix resource extraction tool by Popov Evgeniy Alekseyevich
 
 The program description.
 
 Galactix is an old scroll shooter by Cygnus Studios. This game stores the resources in GLB pseudo-archives.
-Do you want to extract the files from these pseudo-archives? You can use my software for doing it.
+Do you want to extract the files from these pseudo-archives? You can use my software to do it.
 This software is intended for Galactix version 1.3.
 This program takes a target file name and an output path as the command-line arguments.
 Always add a directory separator (\ or /) at the end of the output path.
@@ -23,7 +23,7 @@ Exit codes.
 6: Can't jump to the target offset.
 7: Can't allocate memory.
 8: The invalid format.
-9: The command-line arguments is invalid!
+9: The command-line arguments are invalid!
 
 License.
 
@@ -56,7 +56,7 @@ Version history.
 0.6.5: The small changes.
 0.6.6-0.6.7: A small bug has been fixed.
 0.6.8-0.7: The small changes.
-0.7.1: Visual C++ support has improved.
+0.7.1: Visual C++ support has been improved.
 0.7.1.1: The documentation has been updated.
 0.7.2: The small changes.
 0.7.2.1-0.7.2.2: The documentation has been updated.
@@ -65,9 +65,10 @@ Version history.
 0.7.4.1: The documentation has been updated.
 0.7.5: The small changes.
 0.7.5.1: The documentation has been updated.
-0.7.6: The extraction process has improved.
+0.7.6: The extraction process has been improved.
 0.7.7-0.8: The small changes.
-0.8.1: The file processing has improved.
+0.8.1: The file processing has been improved.
 0.8.2-0.8.5: The small changes.
-0.8.6-0.8.7: The file processing has improved.
+0.8.6-0.8.7: The file processing has been improved.
 0.8.8-0.8.9: The small changes.
+0.8.9.1: The documentation has been updated.
